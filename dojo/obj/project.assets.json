@@ -8,24 +8,26 @@
     "net8.0": []
   },
   "packageFolders": {
-    "/Users/f.b.nascimento/.nuget/packages/": {}
+    "C:\\Users\\b.schneider.de.lima\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/Users/f.b.nascimento/Workplace/projects/Personal/ava-dojo01/dojo/dojo.csproj",
+      "projectUniqueName": "C:\\Documentos\\Dojo\\ava-dojo01\\dojo\\dojo.csproj",
       "projectName": "dojo",
-      "projectPath": "/Users/f.b.nascimento/Workplace/projects/Personal/ava-dojo01/dojo/dojo.csproj",
-      "packagesPath": "/Users/f.b.nascimento/.nuget/packages/",
-      "outputPath": "/Users/f.b.nascimento/Workplace/projects/Personal/ava-dojo01/dojo/obj/",
+      "projectPath": "C:\\Documentos\\Dojo\\ava-dojo01\\dojo\\dojo.csproj",
+      "packagesPath": "C:\\Users\\b.schneider.de.lima\\.nuget\\packages\\",
+      "outputPath": "C:\\Documentos\\Dojo\\ava-dojo01\\dojo\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "/Users/f.b.nascimento/.nuget/NuGet/NuGet.Config"
+        "C:\\Users\\b.schneider.de.lima\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
         "net8.0"
       ],
       "sources": {
+        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
@@ -64,7 +66,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/8.0.303/PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.204/PortableRuntimeIdentifierGraph.json"
       }
     }
   }
