@@ -15,11 +15,11 @@ jobs:
       with:
         dotnet-version: 8.0.x
     
-    # - name: Dotnet Restore
-    #   run: dotnet restore
+     - name: Dotnet Restore
+       run: dotnet restore
 
-    # - name: Build
-    #   run: dotnet build --configuration Release --no-restore
+     - name: Build
+       run: dotnet build --configuration Release --no-restore
     
     # - name: Publish
     #   run: dotnet publish --configuration Release --no-restore --output ./publish
