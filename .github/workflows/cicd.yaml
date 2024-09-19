@@ -31,11 +31,11 @@ jobs:
     - name: Dotnet Restore
       run: dotnet restore ${{ inputs.path }}
 
-    - name: Sonar Scan
-      uses: sonarsource/sonarqube-scan-action@<2.3.0
-      env:
-        SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
-        SONAR_HOST_URL: ${{ vars.SONAR_HOST_URL }}
+    #- name: Sonar Scan
+    #  uses: sonarsource/sonarqube-scan-action@<2.3.0
+    #  env:
+    #    SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
+    #    SONAR_HOST_URL: ${{ vars.SONAR_HOST_URL }}
 
     - name: Build
       run: dotnet build ${{ inputs.path }} --configuration Release --no-restore
@@ -46,10 +46,10 @@ jobs:
     - name: Publish
       run: dotnet publish ${{ inputs.path }} --Property:Version=${{ inputs.app-version }} --configuration Release --no-restore --output ./dojo
 
-    - name:  
+    #- name:  
 
-    # - name: upload artifact
-    #   uses: actions/upload-artifact@v4
-    #   with:
-    #     name: .net-app
-    #     path: ./publish
+    - name: upload artifact
+      uses: actions/upload-artifact@v4
+      with:
+        name: .net-app
+        path: ./dojo
