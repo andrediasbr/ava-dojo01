@@ -2,6 +2,15 @@ name: cicd-dotnet
 
 on: 
   workflow_dispatch:
+    inputs:
+      dotnet-version:
+        type: string
+        description: 'Versão usada pelo .NET'
+        default: '8.0.x'
+      path:
+        type: string
+        description: 'Caminho do aplicativo .NET'
+        default: './dojo'
  
 jobs:
   ci:
@@ -13,19 +22,19 @@ jobs:
     - name: Setup .NET Core  
       uses: actions/setup-dotnet@v4
       with:
-        dotnet-version: 8.0.x
+        dotnet-version: ${{ inputs.dotnet-version }}
     
     - name: Dotnet Restore
-      run: dotnet restore ./dojo
+      run: dotnet restore ${{ inputs.path }}
 
     - name: Build
-      run: dotnet build --configuration Release --no-restore
+      run: dotnet build ${{ inputs.path }} --configuration Release --no-restore
     
     - name: Test
-      run: dotnet test --no-restore --verbosity normal
+      run: dotnet test ${{ inputs.path }} --no-restore --verbosity normal
 
     - name: Publish
-      run: dotnet publish --configuration Release --no-restore --output ./dojo
+      run: dotnet publish ${{ inputs.path }} --configuration Release --no-restore --output ./dojo
 
     # - name: upload artifact
     #   uses: actions/upload-artifact@v4
