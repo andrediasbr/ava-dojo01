@@ -7,6 +7,10 @@ on:
         type: string
         description: 'Versão usada pelo .NET'
         default: '8.0.x'
+      app-version:
+        type: string
+        description: Versão da Aplicação
+        default: '1.0.0'
       path:
         type: string
         description: 'Caminho do aplicativo .NET'
@@ -34,7 +38,7 @@ jobs:
       run: dotnet test ${{ inputs.path }} --no-restore --verbosity normal
 
     - name: Publish
-      run: dotnet publish ${{ inputs.path }} --configuration Release --no-restore --output ./dojo
+      run: dotnet publish ${{ inputs.path }} --Property:Version=${{ inputs.app-version }} --configuration Release --no-restore --output ./dojo
 
     # - name: upload artifact
     #   uses: actions/upload-artifact@v4
