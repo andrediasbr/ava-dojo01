@@ -64,5 +64,6 @@ jobs:
         name: .net-app
         path: ./output
     
-    #- name: Send to registry
-    #  run: dotnet nuget push ./pacote ${{ env.GH-REG }} "${{ secrets.GITHUB_TOKEN }}"
+    - name: Send to registry
+      run: dotnet nuget push ./pacote/*.nukpkg --source "github" --api-key "${{ secrets.GITHUB_TOKEN }}"
+      #${{ env.GH-REG }}
