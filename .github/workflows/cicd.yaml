@@ -52,8 +52,8 @@ jobs:
         name: .net-app
         path: ./output
 
-    - name: Send to registry
-      run: dotnet nuget
+    # - name: Send to registry
+    #  run: dotnet nuget
 
 
        
