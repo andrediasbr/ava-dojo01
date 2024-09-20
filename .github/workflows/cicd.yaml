@@ -14,7 +14,7 @@ on:
       path:
         type: string
         description: 'Caminho do aplicativo .NET'
-        default: './dojo'
+        default: './src-classlib'
  
 jobs:
   ci:
@@ -44,26 +44,18 @@ jobs:
       run: dotnet test ${{ inputs.path }} --no-restore --verbosity normal
 
     - name: Publish
-      run: dotnet publish ${{ inputs.path }} --Property:Version=${{ inputs.app-version }} --configuration Release --no-restore --output ./dojo
+      run: dotnet publish ${{ inputs.path }} --Property:Version=${{ inputs.app-version }} --configuration Release --no-restore --output ./output
 
     - name: upload artifact
       uses: actions/upload-artifact@v4
       with:
         name: .net-app
-        path: ./dojo
+        path: ./output
 
-  cd:
-    runs-on: ubuntu-latest
-    needs: ci
-    environment: 'production'
-      name: 'production'
-      url: ${{ secrets.PRODUCTION_URL }} # TODO: Adicionar a URL de produção
-    
-    - name: Download Artifact
-      uses: actions/download-artifact@v4
-      run: e
-      with:
-        name: .net-app
+    - name: Send to registry
+      run: dotnet nuget
+
+
        
     
     
