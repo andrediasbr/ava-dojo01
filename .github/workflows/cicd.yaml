@@ -15,7 +15,10 @@ on:
         type: string
         description: 'Caminho do aplicativo .NET'
         default: './src-classlib'
- 
+
+env:
+  GH-REG: ghcr.io
+
 jobs:
   ci:
     runs-on: ubuntu-latest
@@ -51,9 +54,9 @@ jobs:
       with:
         name: .net-app
         path: ./output
-
-    # - name: Send to registry
-    #  run: dotnet nuget
+    
+    - name: Send to registry
+      run: dotnet nuget push ${{ env.GH-REG }}
 
 
        
