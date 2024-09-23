@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\jose.j.santos.silva\\avanade-janio\\ava-dojo01\\dojo\\dojo.csproj": {}
+    "/home/abauruel/www/dojo_avanade/ava-dojo01/dojo/dojo.csproj": {}
   },
   "projects": {
-    "C:\\Users\\jose.j.santos.silva\\avanade-janio\\ava-dojo01\\dojo\\dojo.csproj": {
+    "/home/abauruel/www/dojo_avanade/ava-dojo01/dojo/dojo.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\jose.j.santos.silva\\avanade-janio\\ava-dojo01\\dojo\\dojo.csproj",
+        "projectUniqueName": "/home/abauruel/www/dojo_avanade/ava-dojo01/dojo/dojo.csproj",
         "projectName": "dojo",
-        "projectPath": "C:\\Users\\jose.j.santos.silva\\avanade-janio\\ava-dojo01\\dojo\\dojo.csproj",
-        "packagesPath": "C:\\Users\\jose.j.santos.silva\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\jose.j.santos.silva\\avanade-janio\\ava-dojo01\\dojo\\obj\\",
+        "projectPath": "/home/abauruel/www/dojo_avanade/ava-dojo01/dojo/dojo.csproj",
+        "packagesPath": "/home/abauruel/.nuget/packages/",
+        "outputPath": "/home/abauruel/www/dojo_avanade/ava-dojo01/dojo/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\jose.j.santos.silva\\AppData\\Roaming\\NuGet\\NuGet.Config"
+          "/home/abauruel/.nuget/NuGet/NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net8.0"
@@ -32,11 +32,6 @@
           "warnAsError": [
             "NU1605"
           ]
-        },
-        "restoreAuditProperties": {
-          "enableAudit": "true",
-          "auditLevel": "low",
-          "auditMode": "direct"
         }
       },
       "frameworks": {
@@ -58,7 +53,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.401/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "/usr/lib/dotnet/sdk/8.0.108/PortableRuntimeIdentifierGraph.json"
         }
       }
     }

@@ -8,6 +8,6 @@ build_property.PlatformNeutralAssembly =
 build_property.EnforceExtendedAnalyzerRules = 
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = dojo
-build_property.ProjectDir = C:\Users\jose.j.santos.silva\avanade-janio\ava-dojo01\dojo\
+build_property.ProjectDir = /home/abauruel/www/dojo_avanade/ava-dojo01/dojo/
 build_property.EnableComHosting = 
 build_property.EnableGeneratedComInterfaceComImportInterop = 
