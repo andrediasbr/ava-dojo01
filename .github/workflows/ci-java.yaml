@@ -22,7 +22,17 @@ jobs:
         java-version: ${{ inputs.java-version }}
 
     - name: Build with Maven
-      run: mvn -B package --file pom.xml]
+      run: mvn -B package --file pom.xml
+
+    - name: Prepare release
+      env:
+        GITHUB_TOKEN: ${{ secrets.MY_GITHUB_TOKEN }}
+      run: mvn --batch-mode release:prepare -Dusername=$GITHUB_ACTOR -Dpassword=$GITHUB_TOKEN
+      
+    - name: Perform release
+      env:
+        DOCKER_HUB_TOKEN: ${{ secrets.DOCKER_HUB_TOKEN }}
+      run: mvn --batch-mode release:perform
 
       
       
