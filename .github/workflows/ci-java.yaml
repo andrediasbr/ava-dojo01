@@ -29,11 +29,11 @@ jobs:
 
     - name: Build with Maven
       run: mvn -B package --file dojo-java/pom.xml
-
-    # - name: Prepare release
-    #   env:
-    #     GITHUB_TOKEN: ${{ secrets.MY_GITHUB_TOKEN }}
-    #   run: mvn --batch-mode release:prepare -Dusername=$GITHUB_ACTOR -Dpassword=$GITHUB_TOKEN
+      
+    - name: Prepare release
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      run: mvn --batch-mode deploy
       
     # - name: Perform release
     #   env:
