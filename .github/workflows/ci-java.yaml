@@ -5,6 +5,7 @@ on:
     inputs:
       java-version:
         type: string
+        default: "21"
         description: 'Versão do java'
 
 jobs:
