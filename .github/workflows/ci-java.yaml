@@ -55,6 +55,8 @@ jobs:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       run: mvn deploy
       working-directory: ./dojo-java
+    
+     
       
     # - name: Perform release
     #   env:
