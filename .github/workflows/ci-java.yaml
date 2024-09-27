@@ -56,14 +56,11 @@ jobs:
       run: mvn deploy
       working-directory: ./dojo-java
     
-    - name: Login to DockerHub
+    - name: Login to  Container registry
       uses: docker/login-action@v3
       with:
         registry: ghcr.io
         username: ${{ github.actor }}
         password: ${{ secrets.GITHUB_TOKEN }}
       
-    # - name: Perform release
-    #   env:
-    #     DOCKER_HUB_TOKEN: ${{ secrets.DOCKER_HUB_TOKEN }}
-    #   run: mvn --batch-mode release:perform
+
