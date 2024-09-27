@@ -67,7 +67,7 @@ jobs:
       id: meta
       uses: docker/metadata-action@9ec57ed1fcdbf14dcef7dfbe97b2010124a938b7
       with:
-        images: ghcr.io/${{ github.repository }}
+        images: ghcr.io/${{ github.repository }}:0.1.0-SNAPSHOT
 
     - name: Build and push Docker image
       id: push
@@ -78,6 +78,17 @@ jobs:
         tags: ${{ steps.meta.outputs.tags }}
         labels: ${{ steps.meta.outputs.labels }}
     
+    - name: 'Login via Azure CLI'
+      uses: azure/login@v1
+      with:
+        creds: ${{ secrets.AZURE_CREDENTIALS }}
+
+    - name: Publish to WebApp
+      uses: azure/webapps-deploy@v2
+      with:
+        app-name: 'dojo-java'
+        images: 'ghcr.io/${{ github.repository }}:${{ steps.meta.outputs.tags }}'
+
   deploy:
     needs: ci
     runs-on: ubuntu-latest
