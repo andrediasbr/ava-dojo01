@@ -1,7 +1,6 @@
-FROM maven:3.9-eclipse-temurin-21 as build
+FROM docker.io/library/openjdk:24-jdk-slim
 
-WORKDIR /APP
+WORKDIR /app
 
-COPY dojo/pom.xml .
-COPY dojo/src ./src
 
+ADD target/spring-boot-initial.jar 
