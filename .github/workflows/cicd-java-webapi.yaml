@@ -1,6 +1,7 @@
 name: CI/CD Java Web Api
 
 on:
+  workflow_dispatch:
   push:
     paths:
       - 'src-java-webapi/**'

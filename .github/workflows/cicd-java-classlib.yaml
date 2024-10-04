@@ -1,6 +1,7 @@
 name: CI/CD Java Class Library
 
 on:
+  workflow_dispatch:
   push:
 
 jobs:
