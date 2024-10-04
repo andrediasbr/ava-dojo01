@@ -55,7 +55,7 @@
 		<repository>
 			<id>github</id>
 			<name>GitHub Packages</name>
-			<url>https://maven.pkg.github.com/andrediasbr/ava-dojo-review01</url>
+			<url>https://maven.pkg.github.com/andrediasbr/ava-dojo01</url>
 		</repository>
 	</distributionManagement>	
 
