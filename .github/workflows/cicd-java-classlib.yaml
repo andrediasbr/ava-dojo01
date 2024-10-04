@@ -3,6 +3,8 @@ name: CI/CD Java Class Library
 on:
   workflow_dispatch:
   push:
+    paths:
+      - 'src-java-classlib/**'
 
 jobs:
   call-build:
